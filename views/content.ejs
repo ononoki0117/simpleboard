@@ -25,8 +25,16 @@
             <p class="card-text">
                 <%=data.content %>
             </p>
-            <a href="#" class="card-link">Card link</a>
+            <div>
+                <% if (data.path) { %>
+                    <img src="<%= data.path %>" width="200">
+                    <p></p>
+                    <% } %>
+            </div>
+
             <a href="/edit/<%= data._id %>" class="card-link">수정하기</a>
+            <a href="/list" class="card-link">목록</a>
+
         </div>
     </div>
 
